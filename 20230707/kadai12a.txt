@@ -1,0 +1,18 @@
+kadai12a 2023年07月07日
+
+概要：ストリームの入出力のオーバーロード
+説明：独自の型のストリームの入出力の演算子のオーバーロードを挿入できる。入出力する型、パラメータ、実際の入出力の実装の部分にtabstopsを設け、書き換えやすくした。最終行にfinal tabstopを設け、コーディングを続けやすくした。
+言語：C++
+トリガー：ocio
+エディタ：VS Code
+スニペット：
+std::istream &operator>>(std::istream &is, ${1:T}& ${2:v})
+{
+    return is >> $3;
+}
+
+std::ostream &operator<<(std::ostream &os, const ${4:T}& ${5:v})
+{
+    return os << $6;
+}
+$0

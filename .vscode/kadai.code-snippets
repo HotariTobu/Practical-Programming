@@ -1,0 +1,54 @@
+{
+	// Place your Practical-Programming ワークスペース snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Insert shebang": {
+		"scope": "shellscript",
+		"prefix": "sh",
+		"body": "#!/usr/bin/env bash"
+	},
+
+	"Kadai File": {
+		"isFileTemplate": true,
+		"body": [
+			"#!/usr/bin/env bash",
+			"",
+			"# kadai${1:0} $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日",
+			"",
+			"$0",
+			"",
+			"# 実行コマンド + 実行結果",
+		]
+	},
+
+	"I/O Overload": {
+		"prefix": "ocio",
+		"scope": "cpp",
+		"body": [
+			"std::istream &operator>>(std::istream &is, ${1:T}& ${2:v})",
+			"{",
+			"    return is >> $3;",
+			"}",
+			"",
+			"std::ostream &operator<<(std::ostream &os, const ${4:T}& ${5:v})",
+			"{",
+			"    return os << $6;",
+			"}",
+			"$0",
+		],
+		"description": "kadai12a"
+	}
+}

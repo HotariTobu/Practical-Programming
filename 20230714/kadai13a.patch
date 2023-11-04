@@ -1,0 +1,13 @@
+# kadai13a 2023年07月14日
+# 誤植の可能性が高いと考えた理由は次のとおりです。1. 1つ目の連続した部分の前置詞のatは文法的に連続するときがある。look atとwhich ... atで連続していると思った。2. 2つ目の連続した部分の形容詞のfullは文法的に連続する場合はない。
+--- stb_image.h	2023-07-14 13:58:13.376112000 +0900
++++ stb_image_fixed.h	2023-07-14 14:29:24.033304000 +0900
+@@ -5390,7 +5390,7 @@
+
+ // extract an arbitrarily-aligned N-bit value (N=bits)
+ // from v, and then make it 8-bits long and fractionally
+-// extend it to full full range.
++// extend it to full range.
+ static int stbi__shiftsigned(unsigned int v, int shift, int bits)
+ {
+    static unsigned int mul_table[9] = {
